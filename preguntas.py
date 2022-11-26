@@ -24,7 +24,7 @@ def pregunta_01():
     df = pd.read_csv("./amazon_cells_labelled.tsv", 
         sep="\t",
         header=None, 
-        names=None, 
+        names=["msg", "lbl"]
     )
 
     # Separe los grupos de mensajes etiquetados y no etiquetados.
