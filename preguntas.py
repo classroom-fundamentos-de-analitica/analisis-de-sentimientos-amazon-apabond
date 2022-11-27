@@ -127,6 +127,7 @@ def pregunta_04():
         steps=[
             ("countVectorizer", countVectorizer),
             ("BernoulliNB", BernoulliNB()),
+
         ],
     )
 
@@ -134,17 +135,16 @@ def pregunta_04():
     # considerar 10 valores entre 0.1 y 1.0 para el parámetro alpha de
     # BernoulliNB.
     param_grid = {
-        "BernoulliNB_alpha": np.arange(0.1, 1.1, 0.1 ),
+        "BernoulliNB__alpha": np.arange(0.1, 1.1, 0.1),
     }
 
     # Defina una instancia de GridSearchCV con el pipeline y el diccionario de
     # parámetros. Use cv = 5, y "accuracy" como métrica de evaluación
     gridSearchCV = GridSearchCV(
-        estimator= pipeline,
-        param_grid= param_grid,
+        estimator=pipeline,
+        param_grid=param_grid,
         cv=5,
         scoring="accuracy",
-        
     )
 
     # Búsque la mejor combinación de regresores
