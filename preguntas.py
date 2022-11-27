@@ -73,6 +73,7 @@ def pregunta_03():
     """
     # Importe el stemmer de Porter
     # Importe CountVectorizer
+    from nltk.stem import PorterStemmer
     from sklearn.feature_extraction.text import CountVectorizer
 
     # Cree un stemeer que use el algoritmo de Porter.
@@ -101,7 +102,7 @@ def pregunta_04():
     from sklearn.naive_bayes import BernoulliNB
 
     # Cargue las variables.
-    x_train, _, y_train, y_test = pregunta_02()
+    x_train, x_test, y_train, y_test = pregunta_02()
 
     # Obtenga el analizador de la pregunta 3.
     analyzer = pregunta_03()
